@@ -134,3 +134,2250 @@ Did you mean?  @book
   
 app/views/books/_form.html.erb:1:in `_app_views_books__form_html_erb___1937921628754371485_21619020'
 app/views/books/index.html.erb:29:in `_app_views_books_index_html_erb__4331310783064336495_22390640'
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from instance_eval at /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activesupport-5.2.4/lib/active_support/lazy_load_hooks.rb:71)
+Started GET "/books" for 10.0.2.2 at 2020-04-16 03:04:40 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (1.2ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  Rendered books/_form.html.erb (284.2ms)
+  Rendered books/index.html.erb within layouts/application (295.5ms)
+Completed 500 Internal Server Error in 342ms (ActiveRecord: 3.1ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `book' for #<#<Class:0x00000000038efb90>:0x00000000038cf8b8>
+Did you mean?  @book
+               @books):
+    1: <%= form_for(book) do |f| %>
+    2:   <% if book.errors.any? %>
+    3:     <div id="error_explanation">
+    4:       <h2><%= pluralize(book.errors.count, "error") %> prohibited this book from being saved:</h2>
+  
+app/views/books/_form.html.erb:1:in `_app_views_books__form_html_erb___3970623056488332924_28952420'
+app/views/books/index.html.erb:29:in `_app_views_books_index_html_erb__2334409089027268232_29874300'
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from instance_eval at /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activesupport-5.2.4/lib/active_support/lazy_load_hooks.rb:71)
+Started GET "/books" for 10.0.2.2 at 2020-04-16 03:06:55 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (2.2ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  Rendered books/_form.html.erb (46.6ms)
+  Rendered books/index.html.erb within layouts/application (59.5ms)
+Completed 500 Internal Server Error in 134ms (ActiveRecord: 5.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `title' for #<Book id: nil, body: nil, created_at: nil, updated_at: nil>):
+    13: 
+    14:   <div class="field">
+    15:     <%= f.label :title %>
+    16:     <%= f.text_field :title, class: "book_title" %>
+    17:   </div>
+    18: 
+    19:   <div class="field">
+  
+app/views/books/_form.html.erb:16:in `block in _app_views_books__form_html_erb__879379890518463022_32642300'
+app/views/books/_form.html.erb:1:in `_app_views_books__form_html_erb__879379890518463022_32642300'
+app/views/books/index.html.erb:29:in `_app_views_books_index_html_erb___1732140267649886398_33388440'
+Started GET "/" for 10.0.2.2 at 2020-04-16 03:25:32 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/railties-5.2.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/railties-5.2.4/lib/rails/templates/rails/welcome/index.html.erb (2.3ms)
+Completed 200 OK in 7ms (Views: 4.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.0.2.2 at 2020-04-16 03:36:24 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+LoadError (Unable to autoload constant HomeController, expected /home/vagrant/work/work1/app/controllers/home_controller.rb to define it):
+  
+activesupport (5.2.4) lib/active_support/dependencies.rb:511:in `load_missing_constant'
+activesupport (5.2.4) lib/active_support/dependencies.rb:195:in `const_missing'
+activesupport (5.2.4) lib/active_support/inflector/methods.rb:283:in `const_get'
+activesupport (5.2.4) lib/active_support/inflector/methods.rb:283:in `block in constantize'
+activesupport (5.2.4) lib/active_support/inflector/methods.rb:281:in `each'
+activesupport (5.2.4) lib/active_support/inflector/methods.rb:281:in `inject'
+activesupport (5.2.4) lib/active_support/inflector/methods.rb:281:in `constantize'
+activesupport (5.2.4) lib/active_support/dependencies.rb:582:in `get'
+activesupport (5.2.4) lib/active_support/dependencies.rb:613:in `constantize'
+actionpack (5.2.4) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (5.2.4) lib/action_dispatch/http/parameters.rb:101:in `binary_params_for?'
+actionpack (5.2.4) lib/action_dispatch/http/parameters.rb:92:in `set_binary_encoding'
+actionpack (5.2.4) lib/action_dispatch/http/parameters.rb:69:in `path_parameters='
+actionpack (5.2.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.2.4) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.4) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.4) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.7) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+actionpack (5.2.4) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.7) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.7) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.4) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.4) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.4) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.4) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.4) lib/rails/engine.rb:524:in `call'
+puma (3.12.2) lib/puma/configuration.rb:227:in `call'
+puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
+puma (3.12.2) lib/puma/server.rb:476:in `process_client'
+puma (3.12.2) lib/puma/server.rb:334:in `block in run'
+puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from instance_eval at /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activesupport-5.2.4/lib/active_support/lazy_load_hooks.rb:71)
+Started GET "/" for 10.0.2.2 at 2020-04-16 03:37:25 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+LoadError (Unable to autoload constant HomeController, expected /home/vagrant/work/work1/app/controllers/home_controller.rb to define it):
+  
+activesupport (5.2.4) lib/active_support/dependencies.rb:511:in `load_missing_constant'
+activesupport (5.2.4) lib/active_support/dependencies.rb:195:in `const_missing'
+activesupport (5.2.4) lib/active_support/inflector/methods.rb:283:in `const_get'
+activesupport (5.2.4) lib/active_support/inflector/methods.rb:283:in `block in constantize'
+activesupport (5.2.4) lib/active_support/inflector/methods.rb:281:in `each'
+activesupport (5.2.4) lib/active_support/inflector/methods.rb:281:in `inject'
+activesupport (5.2.4) lib/active_support/inflector/methods.rb:281:in `constantize'
+activesupport (5.2.4) lib/active_support/dependencies.rb:582:in `get'
+activesupport (5.2.4) lib/active_support/dependencies.rb:613:in `constantize'
+actionpack (5.2.4) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (5.2.4) lib/action_dispatch/http/parameters.rb:101:in `binary_params_for?'
+actionpack (5.2.4) lib/action_dispatch/http/parameters.rb:92:in `set_binary_encoding'
+actionpack (5.2.4) lib/action_dispatch/http/parameters.rb:69:in `path_parameters='
+actionpack (5.2.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.2.4) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.4) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.4) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.7) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+actionpack (5.2.4) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.7) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.7) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.4) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.4) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.4) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.4) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.4) lib/rails/engine.rb:524:in `call'
+puma (3.12.2) lib/puma/configuration.rb:227:in `call'
+puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
+puma (3.12.2) lib/puma/server.rb:476:in `process_client'
+puma (3.12.2) lib/puma/server.rb:334:in `block in run'
+puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for 10.0.2.2 at 2020-04-16 03:45:06 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+LoadError (Unable to autoload constant HomeController, expected /home/vagrant/work/work1/app/controllers/home_controller.rb to define it):
+  
+activesupport (5.2.4) lib/active_support/dependencies.rb:511:in `load_missing_constant'
+activesupport (5.2.4) lib/active_support/dependencies.rb:195:in `const_missing'
+activesupport (5.2.4) lib/active_support/inflector/methods.rb:283:in `const_get'
+activesupport (5.2.4) lib/active_support/inflector/methods.rb:283:in `block in constantize'
+activesupport (5.2.4) lib/active_support/inflector/methods.rb:281:in `each'
+activesupport (5.2.4) lib/active_support/inflector/methods.rb:281:in `inject'
+activesupport (5.2.4) lib/active_support/inflector/methods.rb:281:in `constantize'
+activesupport (5.2.4) lib/active_support/dependencies.rb:582:in `get'
+activesupport (5.2.4) lib/active_support/dependencies.rb:613:in `constantize'
+actionpack (5.2.4) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (5.2.4) lib/action_dispatch/http/parameters.rb:101:in `binary_params_for?'
+actionpack (5.2.4) lib/action_dispatch/http/parameters.rb:92:in `set_binary_encoding'
+actionpack (5.2.4) lib/action_dispatch/http/parameters.rb:69:in `path_parameters='
+actionpack (5.2.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.2.4) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.4) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.4) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.7) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+actionpack (5.2.4) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.7) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.7) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.4) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.4) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.4) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.4) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.4) lib/rails/engine.rb:524:in `call'
+puma (3.12.2) lib/puma/configuration.rb:227:in `call'
+puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
+puma (3.12.2) lib/puma/server.rb:476:in `process_client'
+puma (3.12.2) lib/puma/server.rb:334:in `block in run'
+puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from instance_eval at /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activesupport-5.2.4/lib/active_support/lazy_load_hooks.rb:71)
+Started GET "/" for 10.0.2.2 at 2020-04-16 03:45:17 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#top as HTML
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 1316ms (Views: 1302.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/Books" for 10.0.2.2 at 2020-04-16 03:45:26 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/Books"):
+  
+actionpack (5.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.4) lib/rails/engine.rb:524:in `call'
+puma (3.12.2) lib/puma/configuration.rb:227:in `call'
+puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
+puma (3.12.2) lib/puma/server.rb:476:in `process_client'
+puma (3.12.2) lib/puma/server.rb:334:in `block in run'
+puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for 10.0.2.2 at 2020-04-16 03:46:07 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#top as HTML
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 131ms (Views: 118.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/books" for 10.0.2.2 at 2020-04-16 03:46:08 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (2.0ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  Rendered books/_form.html.erb (71.0ms)
+  Rendered books/index.html.erb within layouts/application (94.3ms)
+Completed 500 Internal Server Error in 216ms (ActiveRecord: 10.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `title' for #<Book id: nil, body: nil, created_at: nil, updated_at: nil>):
+    13: 
+    14:   <div class="field">
+    15:     <%= f.label :title %>
+    16:     <%= f.text_field :title, class: "book_title" %>
+    17:   </div>
+    18: 
+    19:   <div class="field">
+  
+app/views/books/_form.html.erb:16:in `block in _app_views_books__form_html_erb___692665854169321046_70129233185680'
+app/views/books/_form.html.erb:1:in `_app_views_books__form_html_erb___692665854169321046_70129233185680'
+app/views/books/index.html.erb:29:in `_app_views_books_index_html_erb___659017994603245840_70129233137080'
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from instance_eval at /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activesupport-5.2.4/lib/active_support/lazy_load_hooks.rb:71)
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from require at /home/vagrant/work/work1/bin/rails:9)
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddTitleToBooks (20200416041045)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (4.8ms)[0m  [1m[35mALTER TABLE "books" ADD "title" varchar[0m
+  [1m[36mActiveRecord::SchemaMigration Create (1.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200416041045"]]
+  [1m[35m (4.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from instance_eval at /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activesupport-5.2.4/lib/active_support/lazy_load_hooks.rb:71)
+Started GET "/books" for 10.0.2.2 at 2020-04-16 04:12:36 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (1.1ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  Rendered books/_form.html.erb (29.1ms)
+  Rendered books/index.html.erb within layouts/application (40.9ms)
+Completed 200 OK in 629ms (Views: 590.2ms | ActiveRecord: 4.3ms)
+
+
+Started POST "/books" for 10.0.2.2 at 2020-04-16 04:12:54 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gtZ+Z4PPimJ2Et1EH9OL6sgL/Ka4E9XkBWq1cpsNfo4l72THMslfN96tfUO4gLV/kP2IQGMegGZ8947peidhmw==", "book"=>{"title"=>"efafa", "body"=>"dwadwa"}, "commit"=>"Create Book"}
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBook Create (5.1ms)[0m  [1m[32mINSERT INTO "books" ("body", "created_at", "updated_at", "title") VALUES (?, ?, ?, ?)[0m  [["body", "dwadwa"], ["created_at", "2020-04-16 04:12:54.224504"], ["updated_at", "2020-04-16 04:12:54.224504"], ["title", "efafa"]]
+  [1m[35m (3.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/books/1
+Completed 302 Found in 20ms (ActiveRecord: 8.4ms)
+
+
+Started GET "/books/1" for 10.0.2.2 at 2020-04-16 04:12:54 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBook Load (0.8ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 191ms (Views: 135.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/books" for 10.0.2.2 at 2020-04-16 04:12:56 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.7ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  Rendered books/index.html.erb within layouts/application (12.8ms)
+Completed 500 Internal Server Error in 48ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"edit", :controller=>"books"}, missing required keys: [:id]):
+    17:         <td><%= book.title %></td>
+    18:         <td><%= book.body %></td>
+    19:         <td><%= link_to 'Show', book, class: "show_#{book.id}" %></td>
+    20:         <td><%= link_to 'Edit', edit_book_path, class: "edit_#{book.id}" %></td>
+    21:         <td><%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' }, class: "destroy_#{book.id}" %></td>
+    22:       </tr>
+    23:     <% end %>
+  
+app/views/books/index.html.erb:20:in `block in _app_views_books_index_html_erb___477672622423257325_70236674028280'
+app/views/books/index.html.erb:15:in `_app_views_books_index_html_erb___477672622423257325_70236674028280'
+Started GET "/books" for 10.0.2.2 at 2020-04-16 04:16:22 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.6ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  Rendered books/index.html.erb within layouts/application (6.9ms)
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"edit", :controller=>"books"}, missing required keys: [:id]):
+    17:         <td><%= book.title %></td>
+    18:         <td><%= book.body %></td>
+    19:         <td><%= link_to 'Show', book, class: "show_#{book.id}" %></td>
+    20:         <td><%= link_to 'Edit', edit_book_path, class: "edit_#{book.id}" %></td>
+    21:         <td><%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' }, class: "destroy_#{book.id}" %></td>
+    22:       </tr>
+    23:     <% end %>
+  
+app/views/books/index.html.erb:20:in `block in _app_views_books_index_html_erb___477672622423257325_70236539798520'
+app/views/books/index.html.erb:15:in `_app_views_books_index_html_erb___477672622423257325_70236539798520'
+Started GET "/" for 10.0.2.2 at 2020-04-16 04:16:27 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#top as HTML
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 141ms (Views: 128.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/books" for 10.0.2.2 at 2020-04-16 04:16:29 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.7ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  Rendered books/index.html.erb within layouts/application (21.9ms)
+Completed 500 Internal Server Error in 72ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"edit", :controller=>"books"}, missing required keys: [:id]):
+    17:         <td><%= book.title %></td>
+    18:         <td><%= book.body %></td>
+    19:         <td><%= link_to 'Show', book, class: "show_#{book.id}" %></td>
+    20:         <td><%= link_to 'Edit', edit_book_path, class: "edit_#{book.id}" %></td>
+    21:         <td><%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' }, class: "destroy_#{book.id}" %></td>
+    22:       </tr>
+    23:     <% end %>
+  
+app/views/books/index.html.erb:20:in `block in _app_views_books_index_html_erb___477672622423257325_70236678150200'
+app/views/books/index.html.erb:15:in `_app_views_books_index_html_erb___477672622423257325_70236678150200'
+Started GET "/books/1" for 10.0.2.2 at 2020-04-16 04:16:37 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBook Load (0.8ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 106ms (Views: 95.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/books/1/edit" for 10.0.2.2 at 2020-04-16 04:16:40 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBook Load (0.9ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/_form.html.erb (1.9ms)
+  Rendered books/edit.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 103ms (Views: 85.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/books" for 10.0.2.2 at 2020-04-16 04:16:44 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.8ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  Rendered books/index.html.erb within layouts/application (9.9ms)
+Completed 500 Internal Server Error in 63ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"edit", :controller=>"books"}, missing required keys: [:id]):
+    17:         <td><%= book.title %></td>
+    18:         <td><%= book.body %></td>
+    19:         <td><%= link_to 'Show', book, class: "show_#{book.id}" %></td>
+    20:         <td><%= link_to 'Edit', edit_book_path, class: "edit_#{book.id}" %></td>
+    21:         <td><%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' }, class: "destroy_#{book.id}" %></td>
+    22:       </tr>
+    23:     <% end %>
+  
+app/views/books/index.html.erb:20:in `block in _app_views_books_index_html_erb___477672622423257325_70236616017300'
+app/views/books/index.html.erb:15:in `_app_views_books_index_html_erb___477672622423257325_70236616017300'
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from instance_eval at /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activesupport-5.2.4/lib/active_support/lazy_load_hooks.rb:71)
+Started GET "/books" for 10.0.2.2 at 2020-04-16 04:18:13 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (1.3ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  Rendered books/index.html.erb within layouts/application (397.9ms)
+Completed 500 Internal Server Error in 458ms (ActiveRecord: 4.1ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `edit_book' for #<#<Class:0x0000000002eceb20>:0x0000000002e476c0>
+Did you mean?  edit_book_url):
+    17:         <td><%= book.title %></td>
+    18:         <td><%= book.body %></td>
+    19:         <td><%= link_to 'Show', book, class: "show_#{book.id}" %></td>
+    20:         <td><%= link_to 'Edit', edit_book, class: "edit_#{book.id}" %></td>
+    21:         <td><%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' }, class: "destroy_#{book.id}" %></td>
+    22:       </tr>
+    23:     <% end %>
+  
+app/views/books/index.html.erb:20:in `block in _app_views_books_index_html_erb___337863685008674592_24407620'
+app/views/books/index.html.erb:15:in `_app_views_books_index_html_erb___337863685008674592_24407620'
+Started GET "/books" for 10.0.2.2 at 2020-04-16 04:20:53 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (1.1ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  Rendered books/index.html.erb within layouts/application (10.1ms)
+Completed 500 Internal Server Error in 33ms (ActiveRecord: 1.1ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"books"}, missing required keys: [:id]):
+    16:       <tr>
+    17:         <td><%= book.title %></td>
+    18:         <td><%= book.body %></td>
+    19:         <td><%= link_to 'Show', book_path, class: "show_#{book.id}" %></td>
+    20:         <td><%= link_to 'Edit', edit_book_path, class: "edit_#{book.id}" %></td>
+    21:         <td><%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' }, class: "destroy_#{book.id}" %></td>
+    22:       </tr>
+  
+app/views/books/index.html.erb:19:in `block in _app_views_books_index_html_erb___337863685008674592_70340125313020'
+app/views/books/index.html.erb:15:in `_app_views_books_index_html_erb___337863685008674592_70340125313020'
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from instance_eval at /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activesupport-5.2.4/lib/active_support/lazy_load_hooks.rb:71)
+Started GET "/books" for 10.0.2.2 at 2020-04-16 04:23:19 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (1.3ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  Rendered books/_form.html.erb (36.6ms)
+  Rendered books/index.html.erb within layouts/application (56.5ms)
+Completed 200 OK in 764ms (Views: 722.1ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/books/1" for 10.0.2.2 at 2020-04-16 04:23:22 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBook Load (0.7ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Book Load (0.0ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 90ms (Views: 73.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/books/1/edit" for 10.0.2.2 at 2020-04-16 04:23:24 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBook Load (2.2ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Book Load (0.0ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/_form.html.erb (3.7ms)
+  Rendered books/edit.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 112ms (Views: 92.6ms | ActiveRecord: 2.2ms)
+
+
+Started DELETE "/books/1" for 10.0.2.2 at 2020-04-16 04:23:27 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#destroy as HTML
+  Parameters: {"authenticity_token"=>"6L+NWmy5eUooLjf95sMKF2ntlcJAB941grt0/L8AQxRPhpf63b+sH4CRl/pBkDSCMRvhJJsKi7f7Jk9nXipcAQ==", "id"=>"1"}
+  [1m[36mBook Load (1.2ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBook Destroy (4.8ms)[0m  [1m[31mDELETE FROM "books" WHERE "books"."id" = ?[0m  [["id", 1]]
+  [1m[35m (3.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/books
+Completed 302 Found in 21ms (ActiveRecord: 9.7ms)
+
+
+Started GET "/books" for 10.0.2.2 at 2020-04-16 04:23:27 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.9ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  Rendered books/_form.html.erb (2.3ms)
+  Rendered books/index.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 149ms (Views: 137.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/books" for 10.0.2.2 at 2020-04-16 04:25:51 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (1.5ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  Rendered books/_form.html.erb (4.1ms)
+  Rendered books/index.html.erb within layouts/application (15.1ms)
+Completed 200 OK in 117ms (Views: 106.0ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/books" for 10.0.2.2 at 2020-04-16 04:25:56 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NoXX4E0LXP7VgW2wKs1f++3Cd4tB0B/S/ehdKPeBmmSRvM1A/A2Jq30+zbeNnmFutTQDbZrdSlCEdWazFquFcQ==", "book"=>{"title"=>"dasda", "body"=>"wdqdqw"}, "commit"=>"Create Book"}
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBook Create (8.4ms)[0m  [1m[32mINSERT INTO "books" ("body", "created_at", "updated_at", "title") VALUES (?, ?, ?, ?)[0m  [["body", "wdqdqw"], ["created_at", "2020-04-16 04:25:56.980682"], ["updated_at", "2020-04-16 04:25:56.980682"], ["title", "dasda"]]
+  [1m[35m (3.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/books/2
+Completed 302 Found in 26ms (ActiveRecord: 12.0ms)
+
+
+Started GET "/books/2" for 10.0.2.2 at 2020-04-16 04:25:57 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mBook Load (1.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Book Load (0.0ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 176ms (Views: 164.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/books" for 10.0.2.2 at 2020-04-16 04:25:58 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (1.2ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  Rendered books/_form.html.erb (2.8ms)
+  Rendered books/index.html.erb within layouts/application (25.8ms)
+Completed 200 OK in 150ms (Views: 139.7ms | ActiveRecord: 1.2ms)
+
+
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from instance_eval at /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activesupport-5.2.4/lib/active_support/lazy_load_hooks.rb:71)
+Started GET "/books" for 10.0.2.2 at 2020-04-16 04:30:18 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (2.0ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  Rendered books/_form.html.erb (33.0ms)
+  Rendered books/index.html.erb within layouts/application (53.5ms)
+Completed 200 OK in 764ms (Views: 724.2ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/books" for 10.0.2.2 at 2020-04-16 04:30:22 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (1.5ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  Rendered books/_form.html.erb (2.9ms)
+  Rendered books/index.html.erb within layouts/application (14.1ms)
+Completed 200 OK in 110ms (Views: 101.0ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/books" for 10.0.2.2 at 2020-04-16 04:30:23 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8zxmUlWiea+4eAL8jfk+tGoDyPaBIOt3j3/7d5nL0OtUBXzy5KSs+hDHovsqqgAhMvW8EFotvvX24sDseOHP/g==", "book"=>{"title"=>"", "body"=>""}, "commit"=>"Create Book"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering books/index.html.erb within layouts/application
+  Rendered books/index.html.erb within layouts/application (20.2ms)
+Completed 500 Internal Server Error in 63ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    12:   </thead>
+    13: 
+    14:   <tbody>
+    15:     <% @books.each do |book| %>
+    16:       <tr>
+    17:         <td><%= book.title %></td>
+    18:         <td><%= book.body %></td>
+  
+app/views/books/index.html.erb:15:in `_app_views_books_index_html_erb___1626640051217557045_59558280'
+app/controllers/books_controller.rb:27:in `create'
+Started GET "/books" for 10.0.2.2 at 2020-04-16 04:31:16 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.9ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  Rendered books/_form.html.erb (3.1ms)
+  Rendered books/index.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 118ms (Views: 107.8ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/books" for 10.0.2.2 at 2020-04-16 04:31:17 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SiUZvsE4yNKBu+b6+WZLVMgTr3t3t/Cyl7pOswNmD3HtHAMecD4dhykERv1eNXXBkOXbnay6pTDuJ3Uo4kwQZA==", "book"=>{"title"=>"", "body"=>""}, "commit"=>"Create Book"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  Rendering books/index.html.erb within layouts/application
+  Rendered books/index.html.erb within layouts/application (9.0ms)
+Completed 500 Internal Server Error in 40ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    12:   </thead>
+    13: 
+    14:   <tbody>
+    15:     <% @books.each do |book| %>
+    16:       <tr>
+    17:         <td><%= book.title %></td>
+    18:         <td><%= book.body %></td>
+  
+app/views/books/index.html.erb:15:in `_app_views_books_index_html_erb___1626640051217557045_70141346742380'
+app/controllers/books_controller.rb:27:in `create'
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from instance_eval at /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activesupport-5.2.4/lib/active_support/lazy_load_hooks.rb:71)
+Started GET "/books" for 10.0.2.2 at 2020-04-16 04:31:46 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (1.1ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  Rendered books/_form.html.erb (31.5ms)
+  Rendered books/index.html.erb within layouts/application (47.0ms)
+Completed 200 OK in 766ms (Views: 725.3ms | ActiveRecord: 6.1ms)
+
+
+Started POST "/books" for 10.0.2.2 at 2020-04-16 04:31:49 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MsGfx0z1OWVVJHpGMa454yElbw+odEGQbA1IQuzKZ+mV+IVn/fPsMP2b2kGW/Qd2edMb6XN5FBIVkHPZDeB4/A==", "book"=>{"title"=>"", "body"=>""}, "commit"=>"Create Book"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (1.0ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  Rendered books/_form.html.erb (5.3ms)
+  Rendered books/index.html.erb within layouts/application (22.4ms)
+Completed 200 OK in 167ms (Views: 156.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/books/2/edit" for 10.0.2.2 at 2020-04-16 04:31:58 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mBook Load (0.9ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/_form.html.erb (3.6ms)
+  Rendered books/edit.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 144ms (Views: 125.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/books/2/edit?utf8=%E2%9C%93&_method=patch&authenticity_token=GylgfHlFFFkDHj5bFNq4UWIdGaFLT9JzfbdSTablPUvKUb8a0DX9Y0Q%2BMfIXOzYC4IpV481KMeZFKkccwKHNkA%3D%3D&book%5Btitle%5D=dasda&book%5Bbody%5D=&commit=Update+Book" for 10.0.2.2 at 2020-04-16 04:32:32 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#edit as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GylgfHlFFFkDHj5bFNq4UWIdGaFLT9JzfbdSTablPUvKUb8a0DX9Y0Q+MfIXOzYC4IpV481KMeZFKkccwKHNkA==", "book"=>{"title"=>"dasda", "body"=>""}, "commit"=>"Update Book", "id"=>"2"}
+  [1m[36mBook Load (0.9ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/_form.html.erb (4.4ms)
+  Rendered books/edit.html.erb within layouts/application (21.4ms)
+Completed 200 OK in 233ms (Views: 222.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/books/2/edit?utf8=%E2%9C%93&_method=patch&authenticity_token=GylgfHlFFFkDHj5bFNq4UWIdGaFLT9JzfbdSTablPUvKUb8a0DX9Y0Q%2BMfIXOzYC4IpV481KMeZFKkccwKHNkA%3D%3D&book%5Btitle%5D=dasda&book%5Bbody%5D=&commit=Update+Book" for 10.0.2.2 at 2020-04-16 04:34:15 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#edit as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GylgfHlFFFkDHj5bFNq4UWIdGaFLT9JzfbdSTablPUvKUb8a0DX9Y0Q+MfIXOzYC4IpV481KMeZFKkccwKHNkA==", "book"=>{"title"=>"dasda", "body"=>""}, "commit"=>"Update Book", "id"=>"2"}
+  [1m[36mBook Load (3.3ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/_form.html.erb (5.3ms)
+  Rendered books/edit.html.erb within layouts/application (16.5ms)
+Completed 200 OK in 125ms (Views: 108.9ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/books" for 10.0.2.2 at 2020-04-16 04:34:21 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.8ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  Rendered books/_form.html.erb (3.5ms)
+  Rendered books/index.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 113ms (Views: 104.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/books/2/edit" for 10.0.2.2 at 2020-04-16 04:34:22 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mBook Load (1.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/_form.html.erb (10.3ms)
+  Rendered books/edit.html.erb within layouts/application (26.6ms)
+Completed 200 OK in 165ms (Views: 144.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/books/2/edit?utf8=%E2%9C%93&_method=patch&authenticity_token=JNqaFyYXSyUPR5yQO%2FhfeNybKbYnGcKoo2IOZOWM2C71okVxj2eiH0hnkzk4GdErXgxl9KEcIT2b%2Fxs1g8go9Q%3D%3D&book%5Btitle%5D=dasda&book%5Bbody%5D=wdqdqw&commit=Update+Book" for 10.0.2.2 at 2020-04-16 04:34:24 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#edit as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JNqaFyYXSyUPR5yQO/hfeNybKbYnGcKoo2IOZOWM2C71okVxj2eiH0hnkzk4GdErXgxl9KEcIT2b/xs1g8go9Q==", "book"=>{"title"=>"dasda", "body"=>"wdqdqw"}, "commit"=>"Update Book", "id"=>"2"}
+  [1m[36mBook Load (1.4ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/_form.html.erb (3.5ms)
+  Rendered books/edit.html.erb within layouts/application (13.1ms)
+Completed 200 OK in 122ms (Views: 106.9ms | ActiveRecord: 1.4ms)
+
+
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from instance_eval at /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activesupport-5.2.4/lib/active_support/lazy_load_hooks.rb:71)
+Started GET "/books" for 10.0.2.2 at 2020-04-16 04:35:48 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (1.7ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  Rendered books/_form.html.erb (29.8ms)
+  Rendered books/index.html.erb within layouts/application (50.7ms)
+Completed 200 OK in 733ms (Views: 674.4ms | ActiveRecord: 7.3ms)
+
+
+Started GET "/books/2/edit" for 10.0.2.2 at 2020-04-16 04:35:50 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mBook Load (1.2ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/_form.html.erb (2.6ms)
+  Rendered books/edit.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 136ms (Views: 115.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/books/2/edit?utf8=%E2%9C%93&_method=patch&authenticity_token=OvPkpGBD4nkFAWF2tbmZ1yt39GBa2xgpDGjbRmqPSUzrizvCyTMLQ0Ihbt%2B2WBeEqeC4Itze%2B7w09c4XDMu5lw%3D%3D&book%5Btitle%5D=dasda&book%5Bbody%5D=wdqdqw&commit=Update+Book" for 10.0.2.2 at 2020-04-16 04:35:52 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#edit as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OvPkpGBD4nkFAWF2tbmZ1yt39GBa2xgpDGjbRmqPSUzrizvCyTMLQ0Ihbt+2WBeEqeC4Itze+7w09c4XDMu5lw==", "book"=>{"title"=>"dasda", "body"=>"wdqdqw"}, "commit"=>"Update Book", "id"=>"2"}
+  [1m[36mBook Load (2.5ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/_form.html.erb (3.2ms)
+  Rendered books/edit.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 224ms (Views: 186.4ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/books/2/edit?utf8=%E2%9C%93&_method=patch&authenticity_token=fktSyYkXZH0lEdvWTnXiGBWzkyxHCyyyYDSBHWeXWnbZckhpOBGxKI2ue9HpJtyNTUXnypwGeTAZqbqGhr1FYw%3D%3D&book%5Btitle%5D=dasda&book%5Bbody%5D=wdqdqw&commit=Update+Book" for 10.0.2.2 at 2020-04-16 04:38:18 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#edit as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fktSyYkXZH0lEdvWTnXiGBWzkyxHCyyyYDSBHWeXWnbZckhpOBGxKI2ue9HpJtyNTUXnypwGeTAZqbqGhr1FYw==", "book"=>{"title"=>"dasda", "body"=>"wdqdqw"}, "commit"=>"Update Book", "id"=>"2"}
+  [1m[36mBook Load (10.4ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/_form.html.erb (9.4ms)
+  Rendered books/edit.html.erb within layouts/application (17.4ms)
+Completed 200 OK in 194ms (Views: 142.7ms | ActiveRecord: 10.4ms)
+
+
+Started GET "/books" for 10.0.2.2 at 2020-04-16 04:38:28 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.7ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  Rendered books/_form.html.erb (3.2ms)
+  Rendered books/index.html.erb within layouts/application (13.7ms)
+Completed 200 OK in 123ms (Views: 110.5ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/books" for 10.0.2.2 at 2020-04-16 04:38:31 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"37VF7hudm06mNjA8fM4LVK6RvjHMq2Pl6F1sGgxoyy8TygSKTu6ACh9qDzLjtxoroLwzEPDyHxX19akOTvCTZA==", "book"=>{"title"=>"", "body"=>""}, "commit"=>"Create Book"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  Rendered books/_form.html.erb (7.6ms)
+  Rendered books/index.html.erb within layouts/application (15.3ms)
+Completed 200 OK in 128ms (Views: 113.7ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/books" for 10.0.2.2 at 2020-04-16 04:38:34 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yGlxSXHDL3xyKMs8zJsm9+0Be9TuGmcehy5nwI1k2k5vUGvpwMX6KdqXaztryBhitfcPMjUXMpz+s1xbbE7FWw==", "book"=>{"title"=>"sdadsa", "body"=>"wqdqw"}, "commit"=>"Create Book"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBook Create (7.2ms)[0m  [1m[32mINSERT INTO "books" ("body", "created_at", "updated_at", "title") VALUES (?, ?, ?, ?)[0m  [["body", "wqdqw"], ["created_at", "2020-04-16 04:38:34.803017"], ["updated_at", "2020-04-16 04:38:34.803017"], ["title", "sdadsa"]]
+  [1m[35m (4.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/books/3
+Completed 302 Found in 26ms (ActiveRecord: 11.6ms)
+
+
+Started GET "/books/3" for 10.0.2.2 at 2020-04-16 04:38:34 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mBook Load (23.8ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 143ms (Views: 94.4ms | ActiveRecord: 23.8ms)
+
+
+Started GET "/books" for 10.0.2.2 at 2020-04-16 04:39:44 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (4.1ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  Rendered books/_form.html.erb (5.5ms)
+  Rendered books/index.html.erb within layouts/application (27.7ms)
+Completed 200 OK in 165ms (Views: 148.4ms | ActiveRecord: 4.1ms)
+
+
+Started DELETE "/books/3" for 10.0.2.2 at 2020-04-16 04:39:47 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#destroy as HTML
+  Parameters: {"authenticity_token"=>"V8dnsFtLrXrOhObi5LjxmSkQbaNgMF99fcAToG8vBtvw/n0Q6k14L2Y7RuVD688MceYZRbs9Cv8EXSg7jgUZzg==", "id"=>"3"}
+  [1m[36mBook Load (2.4ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBook Destroy (14.0ms)[0m  [1m[31mDELETE FROM "books" WHERE "books"."id" = ?[0m  [["id", 3]]
+  [1m[35m (4.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/books
+Completed 302 Found in 36ms (ActiveRecord: 21.1ms)
+
+
+Started GET "/books" for 10.0.2.2 at 2020-04-16 04:39:47 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (1.5ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  Rendered books/_form.html.erb (6.8ms)
+  Rendered books/index.html.erb within layouts/application (18.7ms)
+Completed 200 OK in 187ms (Views: 174.7ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/books/2/edit" for 10.0.2.2 at 2020-04-16 04:39:52 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mBook Load (0.9ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/_form.html.erb (3.3ms)
+  Rendered books/edit.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 117ms (Views: 104.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/books/2/edit?utf8=%E2%9C%93&_method=patch&authenticity_token=3Wx5QERan0WKfqDCYQSxG%2FRdMiA9OabsSh2CG22iZEIMFKYm7Sp2f81er2ti5T9Idsp%2BYrs8RXlygJdKC%2BaUmQ%3D%3D&book%5Btitle%5D=dasda&book%5Bbody%5D=wdqdqw&commit=Update+Book" for 10.0.2.2 at 2020-04-16 04:39:53 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#edit as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3Wx5QERan0WKfqDCYQSxG/RdMiA9OabsSh2CG22iZEIMFKYm7Sp2f81er2ti5T9Idsp+Yrs8RXlygJdKC+aUmQ==", "book"=>{"title"=>"dasda", "body"=>"wdqdqw"}, "commit"=>"Update Book", "id"=>"2"}
+  [1m[36mBook Load (1.6ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/_form.html.erb (9.3ms)
+  Rendered books/edit.html.erb within layouts/application (20.8ms)
+Completed 200 OK in 167ms (Views: 154.7ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/books/2/edit?utf8=%E2%9C%93&_method=patch&authenticity_token=pzL%2FQq4klyWIsBQRTEJr9zUF2IcDbe2mMyc59JwXra0AC%2BXiHyJCcCAPtBbrEVVibfOsYdhguCRKugJvfT2yuA%3D%3D&book%5Btitle%5D=dasda&book%5Bbody%5D=wdqdqw&commit=Update+Book" for 10.0.2.2 at 2020-04-16 04:40:05 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#edit as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pzL/Qq4klyWIsBQRTEJr9zUF2IcDbe2mMyc59JwXra0AC+XiHyJCcCAPtBbrEVVibfOsYdhguCRKugJvfT2yuA==", "book"=>{"title"=>"dasda", "body"=>"wdqdqw"}, "commit"=>"Update Book", "id"=>"2"}
+  [1m[36mBook Load (0.8ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/_form.html.erb (5.5ms)
+  Rendered books/edit.html.erb within layouts/application (15.2ms)
+Completed 200 OK in 137ms (Views: 124.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/books/2" for 10.0.2.2 at 2020-04-16 04:40:11 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mBook Load (1.2ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 76ms (Views: 60.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/books" for 10.0.2.2 at 2020-04-16 04:40:14 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.9ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  Rendered books/_form.html.erb (4.8ms)
+  Rendered books/index.html.erb within layouts/application (16.2ms)
+Completed 200 OK in 124ms (Views: 115.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/books/2/edit" for 10.0.2.2 at 2020-04-16 04:40:15 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mBook Load (5.0ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/_form.html.erb (7.7ms)
+  Rendered books/edit.html.erb within layouts/application (21.0ms)
+Completed 200 OK in 164ms (Views: 141.5ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/books/2/edit?utf8=%E2%9C%93&_method=patch&authenticity_token=eGtoOswsDQ5wqL%2FB0doQQE3m9X7Sd6gkVr8Itp0rtwCpE7dcZVzkNDeIsGjSO54Tz3G5PFRyS7FuIh3n%2B29H2w%3D%3D&book%5Btitle%5D=dasda&book%5Bbody%5D=wdqdqw&commit=Update+Book" for 10.0.2.2 at 2020-04-16 04:40:17 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#edit as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eGtoOswsDQ5wqL/B0doQQE3m9X7Sd6gkVr8Itp0rtwCpE7dcZVzkNDeIsGjSO54Tz3G5PFRyS7FuIh3n+29H2w==", "book"=>{"title"=>"dasda", "body"=>"wdqdqw"}, "commit"=>"Update Book", "id"=>"2"}
+  [1m[36mBook Load (1.2ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/_form.html.erb (3.2ms)
+  Rendered books/edit.html.erb within layouts/application (16.5ms)
+Completed 200 OK in 129ms (Views: 117.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/books" for 10.0.2.2 at 2020-04-16 04:40:41 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  Rendered books/_form.html.erb (4.6ms)
+  Rendered books/index.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 128ms (Views: 112.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/books/2" for 10.0.2.2 at 2020-04-16 04:40:43 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mBook Load (1.2ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 108ms (Views: 98.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/books" for 10.0.2.2 at 2020-04-16 04:40:44 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (1.1ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  Rendered books/_form.html.erb (7.9ms)
+  Rendered books/index.html.erb within layouts/application (29.5ms)
+Completed 200 OK in 167ms (Views: 152.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/books/2/edit" for 10.0.2.2 at 2020-04-16 04:40:46 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mBook Load (1.2ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/_form.html.erb (4.0ms)
+  Rendered books/edit.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 124ms (Views: 109.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/books/2/edit" for 10.0.2.2 at 2020-04-16 04:41:22 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mBook Load (1.6ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/_form.html.erb (7.3ms)
+  Rendered books/edit.html.erb within layouts/application (26.4ms)
+Completed 200 OK in 224ms (Views: 205.3ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/books/2/edit?utf8=%E2%9C%93&_method=patch&authenticity_token=FuLG5Mq3VkgOWLzXlCBULzyy0tyEJVqq4Cl%2Bd7PngCSx29xEe7GDHabnHNAzc2q6ZESmOl8oDyiZtEXsUs2fMQ%3D%3D&book%5Btitle%5D=dasda&book%5Bbody%5D=wdqdqw&commit=Update+Book" for 10.0.2.2 at 2020-04-16 04:41:23 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#edit as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FuLG5Mq3VkgOWLzXlCBULzyy0tyEJVqq4Cl+d7PngCSx29xEe7GDHabnHNAzc2q6ZESmOl8oDyiZtEXsUs2fMQ==", "book"=>{"title"=>"dasda", "body"=>"wdqdqw"}, "commit"=>"Update Book", "id"=>"2"}
+  [1m[36mBook Load (4.5ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/_form.html.erb (5.3ms)
+  Rendered books/edit.html.erb within layouts/application (25.0ms)
+Completed 200 OK in 242ms (Views: 210.9ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/books/2/edit?utf8=%E2%9C%93&_method=patch&authenticity_token=sAKZ8CWCIoqRGDcuof4vZyUO9qPTBC1iF4mvcDw1masXO4NQlIT33zmnlykGrRHyffiCRQgJeOBuFJTr3R%2BGvg%3D%3D&book%5Btitle%5D=dasda&book%5Bbody%5D=wdqdqw&commit=Update+Book" for 10.0.2.2 at 2020-04-16 04:41:27 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#edit as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sAKZ8CWCIoqRGDcuof4vZyUO9qPTBC1iF4mvcDw1masXO4NQlIT33zmnlykGrRHyffiCRQgJeOBuFJTr3R+Gvg==", "book"=>{"title"=>"dasda", "body"=>"wdqdqw"}, "commit"=>"Update Book", "id"=>"2"}
+  [1m[36mBook Load (0.8ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/_form.html.erb (2.9ms)
+  Rendered books/edit.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 114ms (Views: 105.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/books/2/edit?utf8=%E2%9C%93&_method=patch&authenticity_token=JVG2%2B35dutGgOCnhwW0hgIj5VI4pqsnduXHLA0jhtPyCaKxbz1tvhAiHieZmPh8V0A8gaPKnnF%2FA7PCYqcur6Q%3D%3D&book%5Btitle%5D=dasda&book%5Bbody%5D=wdqdqw&commit=Update+Book" for 10.0.2.2 at 2020-04-16 04:41:27 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#edit as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JVG2+35dutGgOCnhwW0hgIj5VI4pqsnduXHLA0jhtPyCaKxbz1tvhAiHieZmPh8V0A8gaPKnnF/A7PCYqcur6Q==", "book"=>{"title"=>"dasda", "body"=>"wdqdqw"}, "commit"=>"Update Book", "id"=>"2"}
+  [1m[36mBook Load (1.7ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/_form.html.erb (5.0ms)
+  Rendered books/edit.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 125ms (Views: 110.7ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/books/2/edit?utf8=%E2%9C%93&_method=patch&authenticity_token=V1To2%2BfAoDYtw%2BqF5nG0y1drOP%2B2IZeJO7yf7Bm1NHvwbfJ7VsZ1Y4V8SoJBIopeD51MGW0swgtCIaR3%2BJ8rbg%3D%3D&book%5Btitle%5D=dasda&book%5Bbody%5D=wdqdqw&commit=Update+Book" for 10.0.2.2 at 2020-04-16 04:41:28 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#edit as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"V1To2+fAoDYtw+qF5nG0y1drOP+2IZeJO7yf7Bm1NHvwbfJ7VsZ1Y4V8SoJBIopeD51MGW0swgtCIaR3+J8rbg==", "book"=>{"title"=>"dasda", "body"=>"wdqdqw"}, "commit"=>"Update Book", "id"=>"2"}
+  [1m[36mBook Load (1.2ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/_form.html.erb (4.6ms)
+  Rendered books/edit.html.erb within layouts/application (13.9ms)
+Completed 200 OK in 136ms (Views: 121.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/books/2/edit?utf8=%E2%9C%93&_method=patch&authenticity_token=nLYurk3itIdt9%2F%2B%2BO2vL31z1D668w9NcHxraqHjf5PE7jzQO%2FORh0sVIX7mcOPVKBAN7SGfOht5mh%2BEzmfX75A%3D%3D&book%5Btitle%5D=dasda&book%5Bbody%5D=wdqdqw&commit=Update+Book" for 10.0.2.2 at 2020-04-16 04:41:29 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#edit as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nLYurk3itIdt9/++O2vL31z1D668w9NcHxraqHjf5PE7jzQO/ORh0sVIX7mcOPVKBAN7SGfOht5mh+EzmfX75A==", "book"=>{"title"=>"dasda", "body"=>"wdqdqw"}, "commit"=>"Update Book", "id"=>"2"}
+  [1m[36mBook Load (1.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/_form.html.erb (4.0ms)
+  Rendered books/edit.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 129ms (Views: 115.9ms | ActiveRecord: 1.1ms)
+
+
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from instance_eval at /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activesupport-5.2.4/lib/active_support/lazy_load_hooks.rb:71)
+Started GET "/books/" for 10.0.2.2 at 2020-04-16 04:42:13 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.8ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  Rendered books/_form.html.erb (30.5ms)
+  Rendered books/index.html.erb within layouts/application (47.4ms)
+Completed 200 OK in 683ms (Views: 629.6ms | ActiveRecord: 6.4ms)
+
+
+Started GET "/books/2/edit" for 10.0.2.2 at 2020-04-16 04:42:16 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mBook Load (1.2ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/_form.html.erb (3.6ms)
+  Rendered books/edit.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 135ms (Views: 110.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/books/2/edit?utf8=%E2%9C%93&_method=patch&authenticity_token=fP1hB3VRl7GBp6dB4g8gNG1T7DzgtibHKpWBvtp4X0ithb5h3CF%2Bi8aHqOjh7q5n78SgfmazxVISCJTvvDyvkw%3D%3D&book%5Btitle%5D=dasda&book%5Bbody%5D=wdqdqw&commit=Update+Book" for 10.0.2.2 at 2020-04-16 04:42:18 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#edit as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fP1hB3VRl7GBp6dB4g8gNG1T7DzgtibHKpWBvtp4X0ithb5h3CF+i8aHqOjh7q5n78SgfmazxVISCJTvvDyvkw==", "book"=>{"title"=>"dasda", "body"=>"wdqdqw"}, "commit"=>"Update Book", "id"=>"2"}
+  [1m[36mBook Load (0.8ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/_form.html.erb (4.4ms)
+  Rendered books/edit.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 137ms (Views: 121.5ms | ActiveRecord: 0.8ms)
+
+
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from instance_eval at /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activesupport-5.2.4/lib/active_support/lazy_load_hooks.rb:71)
+Started GET "/books" for 10.0.2.2 at 2020-04-16 04:43:33 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (1.6ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  Rendered books/_form.html.erb (34.7ms)
+  Rendered books/index.html.erb within layouts/application (52.4ms)
+Completed 200 OK in 732ms (Views: 679.9ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/books/2/edit" for 10.0.2.2 at 2020-04-16 04:43:36 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mBook Load (3.0ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/_form.html.erb (2.7ms)
+  Rendered books/edit.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 137ms (Views: 107.2ms | ActiveRecord: 3.0ms)
+
+
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from instance_eval at /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activesupport-5.2.4/lib/active_support/lazy_load_hooks.rb:71)
+Started GET "/books/2/edit" for 10.0.2.2 at 2020-04-16 04:46:27 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mBook Load (1.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/_form.html.erb (26.3ms)
+  Rendered books/edit.html.erb within layouts/application (34.2ms)
+Completed 200 OK in 697ms (Views: 651.7ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/books/2/edit?utf8=%E2%9C%93&_method=patch&authenticity_token=PxXwLITGslzunByhjHeWWtfMuenrQoVuo0%2BQexpQ1h6YLOqMNcBnCUYjvKYrJKjPjzrNDzBP0Oza0qvg%2B3rJCw%3D%3D&book%5Btitle%5D=dasda&book%5Bbody%5D=wdqdqw&commit=Update+Book" for 10.0.2.2 at 2020-04-16 04:46:30 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#edit as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PxXwLITGslzunByhjHeWWtfMuenrQoVuo0+QexpQ1h6YLOqMNcBnCUYjvKYrJKjPjzrNDzBP0Oza0qvg+3rJCw==", "book"=>{"title"=>"dasda", "body"=>"wdqdqw"}, "commit"=>"Update Book", "id"=>"2"}
+  [1m[36mBook Load (1.2ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/_form.html.erb (4.8ms)
+  Rendered books/edit.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 117ms (Views: 103.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/books" for 10.0.2.2 at 2020-04-16 04:46:33 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (1.4ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  Rendered books/_form.html.erb (357.1ms)
+  Rendered books/index.html.erb within layouts/application (370.1ms)
+Completed 500 Internal Server Error in 406ms (ActiveRecord: 1.4ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `book' for #<#<Class:0x00000000038a4ca8>:0x00007fdb28029eb8>
+Did you mean?  @book
+               @books):
+    1: <%= form_for(book) do |f| %>
+    2:   <% if book.errors.any? %>
+    3:     <div id="error_explanation">
+    4:       <h2><%= pluralize(book.errors.count, "error") %> prohibited this book from being saved:</h2>
+  
+app/views/books/_form.html.erb:1:in `_app_views_books__form_html_erb___4560550665145514393_70289622970740'
+app/views/books/index.html.erb:29:in `_app_views_books_index_html_erb___3830869287959964534_70289622914100'
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from instance_eval at /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activesupport-5.2.4/lib/active_support/lazy_load_hooks.rb:71)
+Started GET "/books" for 10.0.2.2 at 2020-04-17 09:14:19 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (2.6ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  Rendered books/_form.html.erb (490.1ms)
+  Rendered books/index.html.erb within layouts/application (509.5ms)
+Completed 500 Internal Server Error in 594ms (ActiveRecord: 6.9ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `book' for #<#<Class:0x00000000038ed020>:0x0000000003881578>
+Did you mean?  @book
+               @books):
+    1: <%= form_for(book) do |f| %>
+    2:   <% if book.errors.any? %>
+    3:     <div id="error_explanation">
+    4:       <h2><%= pluralize(book.errors.count, "error") %> prohibited this book from being saved:</h2>
+  
+app/views/books/_form.html.erb:1:in `_app_views_books__form_html_erb___1032789596942575074_29133460'
+app/views/books/index.html.erb:29:in `_app_views_books_index_html_erb__1066512695630797384_29849500'
+Started GET "/" for 10.0.2.2 at 2020-04-17 09:16:15 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#top as HTML
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 832ms (Views: 817.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/books" for 10.0.2.2 at 2020-04-17 09:16:20 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (1.4ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  Rendered books/index.html.erb within layouts/application (12.8ms)
+Completed 500 Internal Server Error in 45ms (ActiveRecord: 1.4ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"edit", :controller=>"books"}, missing required keys: [:id]):
+    17:         <td><%= book.title %></td>
+    18:         <td><%= book.body %></td>
+    19:         <td><%= link_to 'Show', book, class: "show_#{book.id}" %></td>
+    20:         <td><%= link_to 'Edit', edit_book_path, class: "edit_#{book.id}" %></td>
+    21:         <td><%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' }, class: "destroy_#{book.id}" %></td>
+    22:       </tr>
+    23:     <% end %>
+  
+app/views/books/index.html.erb:20:in `block in _app_views_books_index_html_erb__1066512695630797384_70124542529080'
+app/views/books/index.html.erb:15:in `_app_views_books_index_html_erb__1066512695630797384_70124542529080'
+Started GET "/" for 10.0.2.2 at 2020-04-17 09:18:21 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#top as HTML
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 209ms (Views: 185.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/books" for 10.0.2.2 at 2020-04-17 09:18:23 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (1.5ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  Rendered books/index.html.erb within layouts/application (10.6ms)
+Completed 500 Internal Server Error in 40ms (ActiveRecord: 1.5ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"edit", :controller=>"books"}, missing required keys: [:id]):
+    17:         <td><%= book.title %></td>
+    18:         <td><%= book.body %></td>
+    19:         <td><%= link_to 'Show', book, class: "show_#{book.id}" %></td>
+    20:         <td><%= link_to 'Edit', edit_book_path, class: "edit_#{book.id}" %></td>
+    21:         <td><%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' }, class: "destroy_#{book.id}" %></td>
+    22:       </tr>
+    23:     <% end %>
+  
+app/views/books/index.html.erb:20:in `block in _app_views_books_index_html_erb__1066512695630797384_70124544081440'
+app/views/books/index.html.erb:15:in `_app_views_books_index_html_erb__1066512695630797384_70124544081440'
+Started GET "/" for 10.0.2.2 at 2020-04-17 09:19:52 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#top as HTML
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 555ms (Views: 515.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/books" for 10.0.2.2 at 2020-04-17 09:27:23 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (154.6ms)[0m  [1m[34mSELECT  "books".* FROM "books" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Book Load (0.3ms)[0m  [1m[34mSELECT  "books".* FROM "books" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Book Load (0.0ms)[0m  [1m[34mSELECT  "books".* FROM "books" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Book Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Book Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Book Load (0.0ms)[0m  [1m[34mSELECT  "books".* FROM "books" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Book Load (0.0ms)[0m  [1m[34mSELECT  "books".* FROM "books" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Book Load (0.0ms)[0m  [1m[34mSELECT  "books".* FROM "books" LIMIT ?[0m  [["LIMIT", 11]]
+  Rendered books/_form.html.erb (3774.2ms)
+  Rendered books/index.html.erb within layouts/application (3806.4ms)
+Completed 500 Internal Server Error in 4021ms (ActiveRecord: 155.2ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `book' for #<#<Class:0x00000000038ed020>:0x00007f8e48d92820>
+Did you mean?  @book
+               @books):
+    1: <%= form_for(book) do |f| %>
+    2:   <% if book.errors.any? %>
+    3:     <div id="error_explanation">
+    4:       <h2><%= pluralize(book.errors.count, "error") %> prohibited this book from being saved:</h2>
+  
+app/views/books/_form.html.erb:1:in `_app_views_books__form_html_erb___1032789596942575074_70124542116740'
+app/views/books/index.html.erb:2:in `_app_views_books_index_html_erb__1066512695630797384_70124542138600'
+Started GET "/books" for 10.0.2.2 at 2020-04-17 09:28:12 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  Rendered books/_form.html.erb (129.8ms)
+  Rendered books/index.html.erb within layouts/application (142.9ms)
+Completed 200 OK in 411ms (Views: 384.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/books" for 10.0.2.2 at 2020-04-17 09:28:57 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  Rendered books/_form.html.erb (4.6ms)
+  Rendered books/index.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 137ms (Views: 129.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/books" for 10.0.2.2 at 2020-04-17 09:29:11 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  Rendered books/_form.html.erb (8.8ms)
+  Rendered books/index.html.erb within layouts/application (32.9ms)
+Completed 200 OK in 337ms (Views: 297.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/books" for 10.0.2.2 at 2020-04-17 09:29:24 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.8ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  Rendered books/index.html.erb within layouts/application (7.8ms)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"edit", :controller=>"books"}, missing required keys: [:id]):
+    17:         <td><%= book.title %></td>
+    18:         <td><%= book.body %></td>
+    19:         <td><%= link_to 'Show', book, class: "show_#{book.id}" %></td>
+    20:         <td><%= link_to 'Edit', edit_book_path, class: "edit_#{book.id}" %></td>
+    21:         <td><%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' }, class: "destroy_#{book.id}" %></td>
+    22:       </tr>
+    23:     <% end %>
+  
+app/views/books/index.html.erb:20:in `block in _app_views_books_index_html_erb__1066512695630797384_70124542258900'
+app/views/books/index.html.erb:15:in `_app_views_books_index_html_erb__1066512695630797384_70124542258900'
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from instance_eval at /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activesupport-5.2.4/lib/active_support/lazy_load_hooks.rb:71)
+Started GET "/books" for 10.0.2.2 at 2020-04-17 09:30:55 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (4.9ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  Rendered books/_form.html.erb (106.6ms)
+  Rendered books/index.html.erb within layouts/application (137.1ms)
+Completed 200 OK in 959ms (Views: 871.1ms | ActiveRecord: 9.6ms)
+
+
+Started GET "/books/2" for 10.0.2.2 at 2020-04-17 09:31:01 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mBook Load (0.8ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 149ms (Views: 131.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/books/2/edit" for 10.0.2.2 at 2020-04-17 09:31:03 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mBook Load (0.9ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/_form.html.erb (3.7ms)
+  Rendered books/edit.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 119ms (Views: 106.1ms | ActiveRecord: 0.9ms)
+
+
+Started DELETE "/books/2" for 10.0.2.2 at 2020-04-17 09:31:07 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#destroy as HTML
+  Parameters: {"authenticity_token"=>"EZDxaLyUYhMeCd8DpjpubSYNf/SdxwJzIXRWWd6FvrC2qevIDZK3Rra2fwQBaVD4fvsLEkbKV/FY6W3CP6+hpQ==", "id"=>"2"}
+  [1m[36mBook Load (2.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBook Destroy (4.9ms)[0m  [1m[31mDELETE FROM "books" WHERE "books"."id" = ?[0m  [["id", 2]]
+  [1m[35m (3.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/books
+Completed 302 Found in 23ms (ActiveRecord: 10.9ms)
+
+
+Started GET "/books" for 10.0.2.2 at 2020-04-17 09:31:07 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.7ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  Rendered books/_form.html.erb (6.9ms)
+  Rendered books/index.html.erb within layouts/application (15.8ms)
+Completed 200 OK in 247ms (Views: 227.8ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/books" for 10.0.2.2 at 2020-04-17 09:31:10 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"b+pWtLiEbZXlYiTETpo3rFwzVFfUB86bbko5srn6LgXI00wUCYK4wE3dhMPpyQk5BMUgsQ8KmxkX1wIpWNAxEA==", "book"=>{"title"=>"dasda", "body"=>""}, "commit"=>"Create Book"}
+  [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering books/index.html.erb within layouts/application
+  Rendered books/index.html.erb within layouts/application (31.3ms)
+Completed 500 Internal Server Error in 86ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    12:   </thead>
+    13: 
+    14:   <tbody>
+    15:     <% @books.each do |book| %>
+    16:       <tr>
+    17:         <td><%= book.title %></td>
+    18:         <td><%= book.body %></td>
+  
+app/views/books/index.html.erb:15:in `_app_views_books_index_html_erb__1553590411984648545_70085779827240'
+app/controllers/books_controller.rb:27:in `create'
+Started POST "/books" for 10.0.2.2 at 2020-04-17 09:31:22 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"b+pWtLiEbZXlYiTETpo3rFwzVFfUB86bbko5srn6LgXI00wUCYK4wE3dhMPpyQk5BMUgsQ8KmxkX1wIpWNAxEA==", "book"=>{"title"=>"dasda", "body"=>"dasda"}, "commit"=>"Create Book"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBook Create (3.6ms)[0m  [1m[32mINSERT INTO "books" ("body", "created_at", "updated_at", "title") VALUES (?, ?, ?, ?)[0m  [["body", "dasda"], ["created_at", "2020-04-17 09:31:22.673094"], ["updated_at", "2020-04-17 09:31:22.673094"], ["title", "dasda"]]
+  [1m[35m (3.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/books/4
+Completed 302 Found in 21ms (ActiveRecord: 6.9ms)
+
+
+Started GET "/books/4" for 10.0.2.2 at 2020-04-17 09:31:22 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mBook Load (6.4ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 259ms (Views: 211.3ms | ActiveRecord: 6.4ms)
+
+
+Started GET "/books" for 10.0.2.2 at 2020-04-17 09:31:24 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (1.7ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  Rendered books/_form.html.erb (8.2ms)
+  Rendered books/index.html.erb within layouts/application (25.1ms)
+Completed 200 OK in 173ms (Views: 148.4ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/books" for 10.0.2.2 at 2020-04-17 09:33:08 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  Rendered books/_form.html.erb (5.8ms)
+  Rendered books/index.html.erb within layouts/application (17.2ms)
+Completed 200 OK in 156ms (Views: 129.2ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/books" for 10.0.2.2 at 2020-04-17 09:33:10 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"G6aczgx8yQvgDeHUG7SUPK2ZT2+vl+LhKVBuQTkFgvq8n4ZuvXocXkiyQdO856qp9W87iXSat2NQzVXa2C+d7w==", "book"=>{"title"=>"", "body"=>""}, "commit"=>"Create Book"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering books/index.html.erb within layouts/application
+  Rendered books/index.html.erb within layouts/application (8.5ms)
+Completed 500 Internal Server Error in 37ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    12:   </thead>
+    13: 
+    14:   <tbody>
+    15:     <% @books.each do |book| %>
+    16:       <tr>
+    17:         <td><%= book.title %></td>
+    18:         <td><%= book.body %></td>
+  
+app/views/books/index.html.erb:15:in `_app_views_books_index_html_erb__1553590411984648545_31588580'
+app/controllers/books_controller.rb:27:in `create'
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from instance_eval at /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activesupport-5.2.4/lib/active_support/lazy_load_hooks.rb:71)
+Started GET "/books" for 10.0.2.2 at 2020-04-17 09:33:35 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (1.1ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  Rendered books/_form.html.erb (42.5ms)
+  Rendered books/index.html.erb within layouts/application (66.2ms)
+Completed 200 OK in 967ms (Views: 910.1ms | ActiveRecord: 10.9ms)
+
+
+Started POST "/books" for 10.0.2.2 at 2020-04-17 09:33:38 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eWKXYgRfF6w1Rf0SPi03XaCbRYfWtDr+3VdlrtTd93neW43CtVnC+Z36XRWZfgnI+G0xYQ25b3ykyl41NffobA==", "book"=>{"title"=>"", "body"=>""}, "commit"=>"Create Book"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering books/index.html.erb within layouts/application
+  Rendered books/index.html.erb within layouts/application (13.8ms)
+Completed 500 Internal Server Error in 49ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for #<Book:0x00007f43ec08a228>):
+    12:   </thead>
+    13: 
+    14:   <tbody>
+    15:     <% @books.each do |book| %>
+    16:       <tr>
+    17:         <td><%= book.title %></td>
+    18:         <td><%= book.body %></td>
+  
+app/views/books/index.html.erb:15:in `_app_views_books_index_html_erb__3344342661473477624_69964849759160'
+app/controllers/books_controller.rb:28:in `create'
+Started GET "/books" for 10.0.2.2 at 2020-04-17 09:34:09 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (81.7ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  Rendered books/_form.html.erb (4.5ms)
+  Rendered books/index.html.erb within layouts/application (108.7ms)
+Completed 200 OK in 498ms (Views: 356.3ms | ActiveRecord: 81.7ms)
+
+
+Started POST "/books" for 10.0.2.2 at 2020-04-17 09:34:12 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uwc3jRrrK1yYkB/vuAh7188rVGZ9zE06WPPkWn4oWGYcPi0tq+3+CTAvv+gfW0VCl90ggKbBGLghbt/BnwJHcw==", "book"=>{"title"=>"", "body"=>""}, "commit"=>"Create Book"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering books/index.html.erb within layouts/application
+  Rendered books/index.html.erb within layouts/application (12.8ms)
+Completed 500 Internal Server Error in 57ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for #<Book:0x00007f43f5f58490>):
+    12:   </thead>
+    13: 
+    14:   <tbody>
+    15:     <% @books.each do |book| %>
+    16:       <tr>
+    17:         <td><%= book.title %></td>
+    18:         <td><%= book.body %></td>
+  
+app/views/books/index.html.erb:15:in `_app_views_books_index_html_erb__3344342661473477624_69964927960240'
+app/controllers/books_controller.rb:28:in `create'
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from instance_eval at /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activesupport-5.2.4/lib/active_support/lazy_load_hooks.rb:71)
+Started GET "/books" for 10.0.2.2 at 2020-04-17 09:34:27 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (1.4ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  Rendered books/_form.html.erb (98.6ms)
+  Rendered books/index.html.erb within layouts/application (117.9ms)
+Completed 200 OK in 1056ms (Views: 977.5ms | ActiveRecord: 14.1ms)
+
+
+Started POST "/books" for 10.0.2.2 at 2020-04-17 09:34:45 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wieB4T68ENcR5BG/RVYSkjT9H1x5nCDQhAVqu7/X9E1lHptBj7rFgrlbsbjiBSwHbAtruqKRdVL9mFEgXv3rWA==", "book"=>{"title"=>"", "body"=>"dsad"}, "commit"=>"Create Book"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[31mrollback transaction[0m
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (1.0ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  Rendered books/_form.html.erb (4.5ms)
+  Rendered books/index.html.erb within layouts/application (61.1ms)
+Completed 200 OK in 173ms (Views: 164.1ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/books" for 10.0.2.2 at 2020-04-17 09:34:48 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5WCN3qf0+GoXnd12jjn2eckxMvIUSSfJ1lmRm4bzmm9CWZd+FvItP78ifXEpasjskcdGFM9EckuvxKoAZ9mFeg==", "book"=>{"title"=>"dwqdqw", "body"=>"dsad"}, "commit"=>"Create Book"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBook Create (5.4ms)[0m  [1m[32mINSERT INTO "books" ("body", "created_at", "updated_at", "title") VALUES (?, ?, ?, ?)[0m  [["body", "dsad"], ["created_at", "2020-04-17 09:34:48.983953"], ["updated_at", "2020-04-17 09:34:48.983953"], ["title", "dwqdqw"]]
+  [1m[35m (3.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/books/5
+Completed 302 Found in 22ms (ActiveRecord: 9.2ms)
+
+
+Started GET "/books/5" for 10.0.2.2 at 2020-04-17 09:34:49 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mBook Load (1.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 219ms (Views: 203.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/books" for 10.0.2.2 at 2020-04-17 09:34:51 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (1.4ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  Rendered books/_form.html.erb (3.6ms)
+  Rendered books/index.html.erb within layouts/application (16.5ms)
+Completed 200 OK in 122ms (Views: 112.7ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/books/5/edit" for 10.0.2.2 at 2020-04-17 09:34:59 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mBook Load (0.9ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/_form.html.erb (2.5ms)
+  Rendered books/edit.html.erb within layouts/application (12.9ms)
+Started GET "/books/5/edit" for 10.0.2.2 at 2020-04-17 09:34:59 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mBook Load (0.9ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/_form.html.erb (4.3ms)
+  Rendered books/edit.html.erb within layouts/application (13.2ms)
+Completed 200 OK in 336ms (Views: 325.0ms | ActiveRecord: 0.9ms)
+
+
+Completed 200 OK in 225ms (Views: 212.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/books/5/edit?utf8=%E2%9C%93&_method=patch&authenticity_token=qlIqAOpBWBBqDNt3ZMgQG82MjH7dMcP3spA%2BO6CT%2FsBeO1rzv7GqfD7WjD8qnMGVjY7WCX2XnkHtPCDoa1XQYA%3D%3D&book%5Btitle%5D=dwqdqw&book%5Bbody%5D=dsad&commit=Update+Book" for 10.0.2.2 at 2020-04-17 09:35:00 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#edit as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qlIqAOpBWBBqDNt3ZMgQG82MjH7dMcP3spA+O6CT/sBeO1rzv7GqfD7WjD8qnMGVjY7WCX2XnkHtPCDoa1XQYA==", "book"=>{"title"=>"dwqdqw", "body"=>"dsad"}, "commit"=>"Update Book", "id"=>"5"}
+  [1m[36mBook Load (3.0ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/_form.html.erb (23.7ms)
+  Rendered books/edit.html.erb within layouts/application (48.5ms)
+Completed 200 OK in 278ms (Views: 232.6ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/books/5/edit?utf8=%E2%9C%93&_method=patch&authenticity_token=Fi87XnQX5ljfct%2Bx3dGIhHeZqJin%2FNnBr%2FrITpAsFxWxFiH%2BxREzDXfNf7Z6grYRL2%2FcfnzxjEPWZ%2FPVcQYIAA%3D%3D&book%5Btitle%5D=dwqdqw&book%5Bbody%5D=dsad&commit=Update+Book" for 10.0.2.2 at 2020-04-17 09:35:03 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#edit as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Fi87XnQX5ljfct+x3dGIhHeZqJin/NnBr/rITpAsFxWxFiH+xREzDXfNf7Z6grYRL2/cfnzxjEPWZ/PVcQYIAA==", "book"=>{"title"=>"dwqdqw", "body"=>"dsad"}, "commit"=>"Update Book", "id"=>"5"}
+  [1m[36mBook Load (0.9ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/_form.html.erb (5.6ms)
+  Rendered books/edit.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 141ms (Views: 127.6ms | ActiveRecord: 0.9ms)
+
+
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from instance_eval at /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activesupport-5.2.4/lib/active_support/lazy_load_hooks.rb:71)
+Started GET "/books/" for 10.0.2.2 at 2020-04-17 09:41:04 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (1.3ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  Rendered books/_form.html.erb (31.2ms)
+  Rendered books/index.html.erb within layouts/application (51.4ms)
+Completed 200 OK in 827ms (Views: 783.7ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/books/5/edit" for 10.0.2.2 at 2020-04-17 09:41:54 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mBook Load (0.9ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/_form.html.erb (4.6ms)
+  Rendered books/edit.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 165ms (Views: 138.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/books/5/edit?utf8=%E2%9C%93&_method=patch&authenticity_token=XgLB0tni3BaZSurVwnh9CF4pv%2BuCdQ%2FegaKXDd%2ByvDSqa7EhjBIues2QvZ2MLKyGHivlnCLTUmjeDoneFHSSlA%3D%3D&book%5Btitle%5D=dwqdqw&book%5Bbody%5D=dsad&commit=Update+Book" for 10.0.2.2 at 2020-04-17 09:41:56 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#edit as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XgLB0tni3BaZSurVwnh9CF4pv+uCdQ/egaKXDd+yvDSqa7EhjBIues2QvZ2MLKyGHivlnCLTUmjeDoneFHSSlA==", "book"=>{"title"=>"dwqdqw", "body"=>"dsad"}, "commit"=>"Update Book", "id"=>"5"}
+  [1m[36mBook Load (5.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/_form.html.erb (3.8ms)
+  Rendered books/edit.html.erb within layouts/application (16.5ms)
+Completed 200 OK in 240ms (Views: 225.6ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/books/5/edit?utf8=%E2%9C%93&_method=patch&authenticity_token=%2BXV63PNllVg3aZYIlZFumhoNLXEmXeW16CD247T9XEFeTGB8QmNADZ%2FWNg8ywlAPQvtZl%2F1QsDeRvc14VddDVA%3D%3D&book%5Btitle%5D=dwqdqw&book%5Bbody%5D=dsad&commit=Update+Book" for 10.0.2.2 at 2020-04-17 09:41:59 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#edit as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+XV63PNllVg3aZYIlZFumhoNLXEmXeW16CD247T9XEFeTGB8QmNADZ/WNg8ywlAPQvtZl/1QsDeRvc14VddDVA==", "book"=>{"title"=>"dwqdqw", "body"=>"dsad"}, "commit"=>"Update Book", "id"=>"5"}
+  [1m[36mBook Load (1.9ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/_form.html.erb (3.3ms)
+  Rendered books/edit.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 116ms (Views: 103.4ms | ActiveRecord: 1.9ms)
+
+
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from instance_eval at /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activesupport-5.2.4/lib/active_support/lazy_load_hooks.rb:71)
+Started GET "/books/" for 10.0.2.2 at 2020-04-17 09:42:52 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (1.4ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  Rendered books/_form.html.erb (41.0ms)
+  Rendered books/index.html.erb within layouts/application (63.2ms)
+Completed 200 OK in 758ms (Views: 695.7ms | ActiveRecord: 13.0ms)
+
+
+Started GET "/books/5/edit" for 10.0.2.2 at 2020-04-17 09:42:55 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mBook Load (0.9ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/_form.html.erb (3.8ms)
+  Rendered books/edit.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 122ms (Views: 102.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/books/5/edit?utf8=%E2%9C%93&_method=patch&authenticity_token=aaD1vqyglsdFXR5HfJXE3aGFZra1LjTVEU8yTAT8M06dyYVN%2BVBkqxGHSQ8ywRVT4Yc8wRWIaWNO4yyfzzod7g%3D%3D&book%5Btitle%5D=dwqdqw&book%5Bbody%5D=dsad&commit=Update+Book" for 10.0.2.2 at 2020-04-17 09:42:56 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#edit as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aaD1vqyglsdFXR5HfJXE3aGFZra1LjTVEU8yTAT8M06dyYVN+VBkqxGHSQ8ywRVT4Yc8wRWIaWNO4yyfzzod7g==", "book"=>{"title"=>"dwqdqw", "body"=>"dsad"}, "commit"=>"Update Book", "id"=>"5"}
+  [1m[36mBook Load (1.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/_form.html.erb (6.1ms)
+  Rendered books/edit.html.erb within layouts/application (28.3ms)
+Completed 200 OK in 311ms (Views: 295.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/books/5/edit?utf8=%E2%9C%93&_method=patch&authenticity_token=aaD1vqyglsdFXR5HfJXE3aGFZra1LjTVEU8yTAT8M06dyYVN%2BVBkqxGHSQ8ywRVT4Yc8wRWIaWNO4yyfzzod7g%3D%3D&book%5Btitle%5D=dwqdqw&book%5Bbody%5D=dsad&commit=Update+Book" for 10.0.2.2 at 2020-04-17 09:43:55 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#edit as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aaD1vqyglsdFXR5HfJXE3aGFZra1LjTVEU8yTAT8M06dyYVN+VBkqxGHSQ8ywRVT4Yc8wRWIaWNO4yyfzzod7g==", "book"=>{"title"=>"dwqdqw", "body"=>"dsad"}, "commit"=>"Update Book", "id"=>"5"}
+  [1m[36mBook Load (2.0ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/_form.html.erb (6.0ms)
+  Rendered books/edit.html.erb within layouts/application (29.2ms)
+Completed 200 OK in 306ms (Views: 274.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/books/5/" for 10.0.2.2 at 2020-04-17 09:44:00 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mBook Load (1.3ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 111ms (Views: 93.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/books" for 10.0.2.2 at 2020-04-17 09:44:02 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (2.6ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  Rendered books/_form.html.erb (3.0ms)
+  Rendered books/index.html.erb within layouts/application (20.6ms)
+Completed 200 OK in 137ms (Views: 120.8ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/books/5/edit" for 10.0.2.2 at 2020-04-17 09:44:04 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mBook Load (1.0ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/_form.html.erb (2.2ms)
+  Rendered books/edit.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 138ms (Views: 129.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/books" for 10.0.2.2 at 2020-04-17 09:45:21 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.7ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  Rendered books/_form.html.erb (4.0ms)
+  Rendered books/index.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 127ms (Views: 115.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/books/5/edit" for 10.0.2.2 at 2020-04-17 09:45:22 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mBook Load (5.8ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/_form.html.erb (15.6ms)
+  Rendered books/edit.html.erb within layouts/application (27.4ms)
+Completed 200 OK in 327ms (Views: 290.2ms | ActiveRecord: 5.8ms)
+
+
+Started GET "/books/5/edit?utf8=%E2%9C%93&_method=patch&authenticity_token=1mN2TJR2mbuC2Hb8Nl3gHqA1DT4HRGDiJNDP4li95XgiCga%2FwYZr19YCIbR4CTGQ4DdXSafiPVR7fNExk3vL2A%3D%3D&book%5Btitle%5D=dwqdqw&book%5Bbody%5D=dsad&commit=Update+Book" for 10.0.2.2 at 2020-04-17 09:45:23 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#edit as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1mN2TJR2mbuC2Hb8Nl3gHqA1DT4HRGDiJNDP4li95XgiCga/wYZr19YCIbR4CTGQ4DdXSafiPVR7fNExk3vL2A==", "book"=>{"title"=>"dwqdqw", "body"=>"dsad"}, "commit"=>"Update Book", "id"=>"5"}
+  [1m[36mBook Load (1.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/_form.html.erb (2.8ms)
+  Rendered books/edit.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 137ms (Views: 117.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/books/5" for 10.0.2.2 at 2020-04-17 09:45:53 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mBook Load (2.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 193ms (Views: 167.3ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/books" for 10.0.2.2 at 2020-04-17 09:45:55 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.7ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  Rendered books/_form.html.erb (5.2ms)
+  Rendered books/index.html.erb within layouts/application (26.6ms)
+Completed 200 OK in 192ms (Views: 177.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/books/4/edit" for 10.0.2.2 at 2020-04-17 09:45:56 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mBook Load (7.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/_form.html.erb (30.5ms)
+  Rendered books/edit.html.erb within layouts/application (48.6ms)
+Completed 200 OK in 350ms (Views: 313.8ms | ActiveRecord: 7.1ms)
+
+
+Started GET "/books/4/edit?utf8=%E2%9C%93&_method=patch&authenticity_token=Pxyn1j4Y5YXtMuamHRyQ00xOIpHeYG6R%2FE54GcmsxQ1WlDF0cIYbUC2n8g6tYiwWF49qq6t92ydxQlPZTEeL0w%3D%3D&book%5Btitle%5D=dasda&book%5Bbody%5D=dasda&commit=Update+Book" for 10.0.2.2 at 2020-04-17 09:45:57 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#edit as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Pxyn1j4Y5YXtMuamHRyQ00xOIpHeYG6R/E54GcmsxQ1WlDF0cIYbUC2n8g6tYiwWF49qq6t92ydxQlPZTEeL0w==", "book"=>{"title"=>"dasda", "body"=>"dasda"}, "commit"=>"Update Book", "id"=>"4"}
+  [1m[36mBook Load (0.7ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/_form.html.erb (4.4ms)
+  Rendered books/edit.html.erb within layouts/application (14.7ms)
+Completed 200 OK in 119ms (Views: 103.4ms | ActiveRecord: 0.7ms)
+
+
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from instance_eval at /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activesupport-5.2.4/lib/active_support/lazy_load_hooks.rb:71)
+Started GET "/" for 10.0.2.2 at 2020-04-17 09:47:41 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#top as HTML
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 589ms (Views: 572.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/books" for 10.0.2.2 at 2020-04-17 09:47:43 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (2.2ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  Rendered books/_form.html.erb (42.7ms)
+  Rendered books/index.html.erb within layouts/application (67.5ms)
+Completed 200 OK in 254ms (Views: 200.6ms | ActiveRecord: 7.9ms)
+
+
+Started GET "/books/5" for 10.0.2.2 at 2020-04-17 09:47:46 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mBook Load (1.4ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 98ms (Views: 80.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/books/5/edit" for 10.0.2.2 at 2020-04-17 09:47:47 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mBook Load (1.8ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/_form.html.erb (6.4ms)
+  Rendered books/edit.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 139ms (Views: 124.6ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/books/5/edit?utf8=%E2%9C%93&_method=patch&authenticity_token=GuqgJQEKyKArRungv3XTq%2BonY1aEi7gPmgUT73m6yaPug9DWVPo6zH%2BcvqjxIQIlqiU5ISQt5bnFqQ08snznAw%3D%3D&book%5Btitle%5D=dwqdqw&book%5Bbody%5D=dsad&commit=Update+Book" for 10.0.2.2 at 2020-04-17 09:47:51 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#edit as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GuqgJQEKyKArRungv3XTq+onY1aEi7gPmgUT73m6yaPug9DWVPo6zH+cvqjxIQIlqiU5ISQt5bnFqQ08snznAw==", "book"=>{"title"=>"dwqdqw", "body"=>"dsad"}, "commit"=>"Update Book", "id"=>"5"}
+  [1m[36mBook Load (1.0ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/_form.html.erb (4.8ms)
+  Rendered books/edit.html.erb within layouts/application (13.7ms)
+Completed 200 OK in 100ms (Views: 89.2ms | ActiveRecord: 1.0ms)
+
+
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from instance_eval at /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activesupport-5.2.4/lib/active_support/lazy_load_hooks.rb:71)
+Started GET "/books/5/" for 10.0.2.2 at 2020-04-17 09:49:32 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mBook Load (1.7ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 561ms (Views: 519.3ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/books/5/edit" for 10.0.2.2 at 2020-04-17 09:49:51 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mBook Load (2.6ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/_form.html.erb (50.4ms)
+  Rendered books/edit.html.erb within layouts/application (58.7ms)
+Completed 200 OK in 326ms (Views: 269.2ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/books/5/edit?utf8=%E2%9C%93&_method=patch&authenticity_token=NhSUBaz3ZFSqnZb7IvUbC6GyeQpPffkzOvoWCMp544PCfeT2%2BQeWOP5HwbNsocqF4bAjfe%2FbpIVlVgjbAb%2FNIw%3D%3D&book%5Btitle%5D=dwqdqw&book%5Bbody%5D=&commit=Update+Book" for 10.0.2.2 at 2020-04-17 09:49:55 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#edit as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NhSUBaz3ZFSqnZb7IvUbC6GyeQpPffkzOvoWCMp544PCfeT2+QeWOP5HwbNsocqF4bAjfe/bpIVlVgjbAb/NIw==", "book"=>{"title"=>"dwqdqw", "body"=>""}, "commit"=>"Update Book", "id"=>"5"}
+  [1m[36mBook Load (5.3ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/_form.html.erb (4.0ms)
+  Rendered books/edit.html.erb within layouts/application (20.9ms)
+Completed 200 OK in 240ms (Views: 164.0ms | ActiveRecord: 5.3ms)
+
+
